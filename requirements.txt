@@ -195,3 +195,13 @@ xxhash==3.5.0
 yarl==1.20.1
 zipp @ file:///C:/b/abs_2fcpcg89my/croot/zipp_1732630746332/work
 zstandard==0.24.0
+langchain-openai
+langchain-community
+langchain-chroma
+python-dotenv
+pandas
+pdfplumber
+pillow
+sentence-transformers
+openai
+scikit-learn

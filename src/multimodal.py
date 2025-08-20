@@ -1,11 +1,9 @@
 import pdfplumber
 import pandas as pd
+from PIL import Image
+import pytesseract
 
 def extract_text_from_pdf(pdf_path):
-    """
-    Extracts all text from a PDF file.
-    Returns a single string containing all extracted text.
-    """
     text = ""
     with pdfplumber.open(pdf_path) as pdf:
         for page in pdf.pages:
@@ -15,9 +13,10 @@ def extract_text_from_pdf(pdf_path):
     return text
 
 def extract_table_from_csv(csv_path):
-    """
-    Loads a CSV as a pandas DataFrame.
-    Returns the DataFrame.
-    """
     df = pd.read_csv(csv_path)
     return df
+
+def extract_text_from_image(image_path):
+    image = Image.open(image_path)
+    text = pytesseract.image_to_string(image)
+    return text
